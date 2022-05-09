@@ -1,1 +1,30 @@
-<h1>Tela de noticias</h1>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <title>Noticias</title>
+</head>
+<body>
+    <h1>Notícias</h1>
+        <table>
+            <tr>
+                <td>ID</td>
+                <td>Titulo</td>
+                <td>Noticia</td>
+            </tr>
+
+<!-- Comandos JS para tornar a pagina dinamica, tudo que estiver dentro do (<%  %>)será interpretado pelo JS -->
+
+            <% for(var i=0; i < noticias.length; i++) { %>
+             
+
+            <tr>
+                <td><%= noticias[i].id_noticia%></td>
+                <td><%= noticias[i].titulo%></td>
+                <td><%= noticias[i].noticia%></td>
+            </tr>
+
+            <% } %>
+        </table>
+</body>
+</html>
